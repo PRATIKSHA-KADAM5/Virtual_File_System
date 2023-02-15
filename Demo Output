@@ -1,0 +1,70 @@
+DILB created successfully
+
+Customised VFS : > create pratiksha.txt 3
+File is successfully created with file descriptor : 0
+
+Customised VFS : > write pratiksha.txt
+Enter the data : 
+India
+Sucessfully : 5 bytes written
+
+Customised VFS : > read pratiksha.txt 2
+In
+Customised VFS : > read pratiksha.txt 3
+dia
+Customised VFS : > read pratiksha.txt 2
+ERROR : Reached at end of file
+
+Customised VFS : > lseek pratiksha.txt 0 0
+Successfully Changed
+
+Customised VFS : > ls
+
+File Name       Inode number    File size       Link count
+----------------------------------------------------------------
+pratiksha.txt           1               5               1
+----------------------------------------------------------------
+
+Customised VFS : > stat pratiksha.txt
+
+---------Statistical Information about file-----------
+File name : pratiksha.txt
+Inode Number 1
+File size : 1024
+Actual File size : 5
+Link count : 1
+Reference count : 1
+File Permission : Read & Write
+ ------------------------------------------------------
+
+
+Customised VFS : > open pratiksha.txt 1
+File is successfully opened with file descriptor : 1
+
+Customised VFS : > fstat 0
+
+---------Statistical Information about file---------
+File name : pratiksha.txt
+Inode Number 1
+File size : 1024
+Actual File size : 5
+Link count : 1
+Reference count : 2
+File Permission : Read & Write
+-----------------------------------------------------
+
+
+Customised VFS : > truncate pratiksha.txt 
+Data Succesfully Removed
+
+Customised VFS : > closeall
+All Files Are Closed Successfully
+
+Customised VFS : > rm pratiksha.txt
+File Successfully Deleted
+
+Customised VFS : > ls
+Error : There are no files
+
+Customised VFS : > exit
+Terminating the Customised Virtual File System
